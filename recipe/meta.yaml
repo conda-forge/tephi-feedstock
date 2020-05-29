@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps  -vv
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
     - matplotlib-base
     - numpy >=1.14
     - scipy
+    - scooby
 
 test:
   imports:
