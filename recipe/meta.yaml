@@ -1,5 +1,6 @@
+{% set python_min = '3.10' %}
 {% set name = "tephi" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 382be3d954d6c62add0af5092bf3808d18860aaf263377cb0ee4cec7988c4c6c
+  sha256: 7b17db61fc4e8eedad99a6f1e6f63c4e670f6eeb6857eb21ec007f48a2c1bc26
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -21,7 +22,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - matplotlib-base
+    - matplotlib-base >=3.10
     - numpy >=1.21
     - scipy
 
