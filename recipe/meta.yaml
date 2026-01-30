@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "tephi" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b17db61fc4e8eedad99a6f1e6f63c4e670f6eeb6857eb21ec007f48a2c1bc26
+  sha256: 7e1cbf09c15c9c004a9f605659eeb4ec3c64bc91a7018cfde098c5413114f1e5
 
 build:
   number: 0
