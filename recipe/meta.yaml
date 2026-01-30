@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "tephi" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0.post0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b17db61fc4e8eedad99a6f1e6f63c4e670f6eeb6857eb21ec007f48a2c1bc26
+  sha256: 55677bb5fd1e6a3850b3b404536d98a352ca7ca9d45ebb58e91b8708046b25fa
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - matplotlib-base >=3.10
     - numpy >=1.21
     - scipy
+    - shapely
 
 test:
   requires:
